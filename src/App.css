@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: capitalize;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  list-style: none;
+}
+
+header {
+  background-color: #E8F3D6;
+  box-shadow: -5px 0px 44px 6px rgba(54, 72, 240, 0.1);
+  padding: 10px 30px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header input {
+  padding: 8px 13px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.countries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.country-card {
+  min-width: 350px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: -5px 0px 44px 6px rgba(54, 72, 240, 0.1);
+  transition: all ease-in .2s;
+  cursor: pointer;
+}
+
+.country-card:hover {
+  box-shadow: -5px 0px 44px 6px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.country-card p {
+  max-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.country-card img {
+  height: 40px;
+  width: 60px;
+  size-adjust: 3/4;
+}
+
+/* popup */
+
+.popup-layout {
+  transition: all 1.2s ease-in-out;
+  background-color: #FFDCA9;
+  z-index: 1;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: scale(0);
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.show {
+  transform: scale(1);
+}
+
+.popup-content {
+  transition: all 1.2s ease-in-out;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  box-shadow: -5px 0px 44px 6px rgba(54, 72, 240, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.popup-content .flag {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all ease-in-out .8s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.popup-content .flag:hover {
+  transform: rotate(360deg);
 }
