@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import CountryCard from './CountryCard'
+import React, { createContext, useEffect, useState } from 'react'
+import Header from './Header'
+import Main from './Main'
 import Popup from './Popup'
+
+export const PopupContext = createContext()
 
 export default function Done() {
    const
@@ -19,17 +22,11 @@ export default function Done() {
 
    return (
       <div>
-         <header>
-            <h1>countries app</h1> <p>{filteredCountries.length} countries</p>
-            <input type='search' onChange={e => setSearch(e.target.value)} placeholder='search...' />
-         </header>
-
-         <ul className='countries'>
-            {filteredCountries.map((c, i) =>
-               <CountryCard key={`${c.ccn3} ${i}`} country={c} setPopup={setPopup} />)}
-         </ul>
-
-         <Popup setPopup={setPopup} popup={popup} className={popup && 'show'} />
+         <Header setSearch={setSearch} filteredCountries={filteredCountries} />
+         <PopupContext.Provider value={{ popup, setPopup }}>
+            <Main filteredCountries={filteredCountries} />
+            <Popup className={popup && 'show'} />
+         </PopupContext.Provider>
       </div>
    )
 }

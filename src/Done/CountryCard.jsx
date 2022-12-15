@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { PopupContext } from '.'
 
-export default function CountryCard({ country = {}, setPopup }) {
+export default function CountryCard({ country = {} }) {
    const { name, flags } = country
+   const { setPopup } = useContext(PopupContext)
 
    return (
       <li className='country-card' onClick={() => setPopup(country)}>

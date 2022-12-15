@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { PopupContext } from '.'
 
-export default function Popup({ popup, setPopup, className }) {
+export default function Popup({ className }) {
+   const { popup, setPopup } = useContext(PopupContext)
 
    return (
       <div className={`popup-layout ${className}`} onClick={() => setPopup()} >
