@@ -24,11 +24,17 @@ function Class() {
    // }, [search, countries.length])
 
    useEffect(() => {
-      fetch('https://restcountries.com/v3.1/all')
-         .then(res => res.json())
-         .then(setCountries)
+      axios.get('https://restcountries.com/v3.1/all')
+         .then(res => setCountries(res.data))
          .catch(err => console.log(err))
    }, [])
+
+   // useEffect(() => {
+   //    fetch('https://restcountries.com/v3.1/all')
+   //       .then(res => res.json())
+   //       .then(setCountries)
+   //       .catch(err => console.log(err))
+   // }, [])
 
    return (
       <div>
