@@ -25,7 +25,10 @@ function Class() {
 
    useEffect(() => {
       axios.get('https://restcountries.com/v3.1/all')
-         .then(res => setCountries(res.data))
+         .then(res => {
+            console.log(res);
+            setCountries(res.data)
+         })
          .catch(err => console.log(err))
    }, [])
 
