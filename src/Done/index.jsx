@@ -10,7 +10,7 @@ export default function Done() {
       [countries, setCountries] = useState([]),
       [search, setSearch] = useState(''),
       [popup, setPopup] = useState(),
-      filteredCountries = search ? countries.filter(c => c.name.common.includes(search)) : countries
+      filteredCountries = search ? countries.filter(c => c.name.common.toLowerCase().includes(search.toLowerCase())) : countries
 
 
    useEffect(() => {
