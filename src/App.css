@@ -155,3 +155,17 @@ header input {
   transform: scale(1.2);
   text-decoration: underline;
 }
+
+.country-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.country-page img {
+  width: 600px;
+  max-width: 100%;
+}

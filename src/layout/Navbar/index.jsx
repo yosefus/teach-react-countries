@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
+
    function getClassNameByActive({ isActive }) {
       return isActive ? 'active' : ''
    }
