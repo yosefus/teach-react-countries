@@ -18,6 +18,7 @@ function Class() {
 
    // 2
    // const [filtered, setFilteredCountries] = useState([])
+
    // useEffect(() => {
    //    const filtered = countries.filter(country => country?.name?.common?.toLowerCase().includes(search.toLowerCase()))
    //    setFilteredCountries(filtered)
