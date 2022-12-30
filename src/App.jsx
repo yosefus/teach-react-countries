@@ -25,6 +25,8 @@ function App() {
             <Route index element={<>about us</>} />
             <Route path='user' element={<>about us user</>} />
           </Route>
+
+          <Route path='*' element={<>404 page</>} />
         </Routes>
       </div>
     </div>

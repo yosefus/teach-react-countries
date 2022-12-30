@@ -9,7 +9,12 @@ export default function Navbar() {
    return (
       <header className='navbar'>
          <NavLink className={getClassNameByActive} to='/'>home</NavLink>
-         <NavLink className={getClassNameByActive} to='/countries'>countries</NavLink>
+         <NavLink
+            className={getClassNameByActive}
+            to={{ pathname: '/countries', search: '?search=pak' }}
+         >
+            countries
+         </NavLink>
          <NavLink className={getClassNameByActive} to='about'>about us</NavLink>
       </header>
    )
