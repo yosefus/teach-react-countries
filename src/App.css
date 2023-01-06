@@ -201,3 +201,12 @@ header input {
   padding: 10px 20px;
 
 }
+
+/* admin-nav */
+
+.admin-nav {
+  background-color: rgb(255, 128, 128);
+  display: flex;
+  justify-content: center;
+  padding: 10px 20px;
+}

@@ -8,6 +8,7 @@ import Navbar from './layout/Navbar';
 import Country from './pages/Country';
 import Login from './pages/Login';
 import Layout from './layout/Layout';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
 
@@ -24,10 +25,18 @@ function App() {
                 <Route path=':countryCode' element={<Country />} />
                 {/* <Route path=':countryCode' element={<CountryState />} /> */}
               </Route>
+
               <Route path='about'>
                 <Route index element={<>about us</>} />
                 <Route path='user' element={<>about us user</>} />
               </Route>
+
+              {/* protected route */}
+              <Route path='admin' element={<ProtectedRoute />} >
+                <Route index element={<>admin</>} />
+                <Route path='users' element={<>users</>} />
+              </Route>
+
               <Route path='*' element={<>404 page</>} />
             </Routes>
           </div>

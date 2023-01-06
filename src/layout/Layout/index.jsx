@@ -4,9 +4,8 @@ import Login from '../../pages/Login'
 export const LoginContext = createContext()
 
 export default function Layout({ children }) {
-   const initialUser = null
-   // const initialUser = { name: 'avi', token: 'sdfxfsdf', email: 's@s' }
-   const [user, setUser] = useState(initialUser)
+   const [user, setUser] = useState()
+   // console.log(user);
 
    return (
       <LoginContext.Provider value={{ user, setUser }}>
