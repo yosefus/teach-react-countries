@@ -10,7 +10,7 @@ export default function Login() {
    function submitLogin(e) {
       e.preventDefault()
       // setUser(formData)
-      setUser({ email, password, role: 'simple' })
+      setUser({ email, password, role: 'admin' })
    }
 
    // function onChange(e) {

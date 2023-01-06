@@ -210,3 +210,15 @@ header input {
   justify-content: center;
   padding: 10px 20px;
 }
+
+/* not-found */
+
+.not-found {
+  min-height: 90vh;
+  background-color: #262626;
+  color: #fff;
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

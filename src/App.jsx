@@ -9,6 +9,7 @@ import Country from './pages/Country';
 import Login from './pages/Login';
 import Layout from './layout/Layout';
 import ProtectedRoute from './components/ProtectedRoute';
+import NotFound from './pages/NotFound';
 
 function App() {
 
@@ -26,7 +27,7 @@ function App() {
                 {/* <Route path=':countryCode' element={<CountryState />} /> */}
               </Route>
 
-              <Route path='about'>
+              <Route path='about' >
                 <Route index element={<>about us</>} />
                 <Route path='user' element={<>about us user</>} />
               </Route>
@@ -35,9 +36,13 @@ function App() {
               <Route path='admin' element={<ProtectedRoute />} >
                 <Route index element={<>admin</>} />
                 <Route path='users' element={<>users</>} />
+                <Route path='about'>
+                  <Route index element={<>about us</>} />
+                  <Route path='user' element={<>about us user</>} />
+                </Route>
               </Route>
 
-              <Route path='*' element={<>404 page</>} />
+              <Route path='*' element={<NotFound />} />
             </Routes>
           </div>
         </>
