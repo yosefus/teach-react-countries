@@ -35,10 +35,10 @@ function App() {
               {/* protected route */}
               <Route path='admin' element={<ProtectedRoute />} >
                 <Route index element={<>admin</>} />
-                <Route path='users' element={<>users</>} />
+                <Route path='users' element={<>users admin</>} />
                 <Route path='about'>
-                  <Route index element={<>about us</>} />
-                  <Route path='user' element={<>about us user</>} />
+                  <Route index element={<>about us admin</>} />
+                  <Route path='user' element={<>about us user admin</>} />
                 </Route>
               </Route>
 

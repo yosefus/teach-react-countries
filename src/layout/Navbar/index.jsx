@@ -1,9 +1,18 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { LoginContext } from '../Layout'
 
 export default function Navbar() {
+   const { setUser } = useContext(LoginContext)
+   const navigate = useNavigate()
 
    function getClassNameByActive({ isActive }) {
       return isActive ? 'active' : ''
+   }
+
+   function logout() {
+      setUser()
+      navigate('/about')
    }
 
    return (
@@ -16,6 +25,7 @@ export default function Navbar() {
             countries
          </NavLink>
          <NavLink className={getClassNameByActive} to='/about'>about us</NavLink>
+         <button onClick={logout}>logout</button>
       </header>
    )
 }
