@@ -15,7 +15,7 @@ export default function Navbar() {
          >
             countries
          </NavLink>
-         <NavLink className={getClassNameByActive} to='about'>about us</NavLink>
+         <NavLink className={getClassNameByActive} to='/about'>about us</NavLink>
       </header>
    )
 }
