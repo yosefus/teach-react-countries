@@ -5,7 +5,7 @@ import Countries from './Class';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './layout/Navbar';
 import Country from './pages/Country';
-import CountryState from './pages/CountryState';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
             <Route path=':countryCode' element={<Country />} />
             {/* <Route path=':countryCode' element={<CountryState />} /> */}
           </Route>
+          <Route path='login' element={<Login />} />
 
           <Route path='about'>
             <Route index element={<>about us</>} />

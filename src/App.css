@@ -169,3 +169,35 @@ header input {
   width: 600px;
   max-width: 100%;
 }
+
+/* login */
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.login-page form {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #262626;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.login-page form input {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.login-page form button {
+  padding: 10px 20px;
+
+}
