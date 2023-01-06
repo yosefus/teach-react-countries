@@ -23,6 +23,11 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: #262626;
+}
+
 header {
   background-color: #E8F3D6;
   box-shadow: -5px 0px 44px 6px rgba(54, 72, 240, 0.1);
@@ -87,7 +92,6 @@ header input {
   z-index: 1;
   position: fixed;
   cursor: pointer;
-  transform: scale(0);
   width: 100vw;
   top: 0;
   bottom: 0;
@@ -97,6 +101,7 @@ header input {
   max-width: 100vw;
   overflow: hidden;
   padding: 10px;
+  transform: scale(0);
 }
 
 .show {
@@ -130,4 +135,69 @@ header input {
 
 .popup-content .flag:hover {
   transform: rotate(360deg);
+}
+
+/* app */
+.navbar {
+  justify-content: flex-start;
+  height: 60px;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #262626;
+  text-transform: capitalize;
+  transition: all .2s ease-in-out;
+}
+
+.navbar .active {
+  transform: scale(1.2);
+  text-decoration: underline;
+}
+
+.country-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.country-page img {
+  width: 600px;
+  max-width: 100%;
+}
+
+/* login */
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.login-page form {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #262626;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.login-page form input {
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.login-page form button {
+  padding: 10px 20px;
+
 }
